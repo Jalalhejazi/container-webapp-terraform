@@ -1,0 +1,14 @@
+{
+  "name": "demo-tf-webapp-docker",
+  "version": "1.0.0",
+  "description": "Terraform IaC",
+  "scripts": {
+    "prevalidate" :"terraform fmt",
+    "validate" :"terraform validate",
+    "plan" :  "terraform plan", 
+    "deploy": "terraform apply -auto-approve",
+    "kill" :  "terraform destroy  -auto-approve"
+  },
+  "author": "JAZJ",
+  "license": "MIT"
+}

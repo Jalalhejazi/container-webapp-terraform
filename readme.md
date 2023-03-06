@@ -28,14 +28,13 @@ PremiumV2 Tier → P1v2, P2v2, P3v2 (Small, Medium, Large)
 
 ```
 
+## Terraform-Associate-Study-Guide
+
+- https://www.selikoff.net/wp-content/uploads/2022/08/Terraform-Associate-Study-Guide.pdf
+
+
+
 ## Comparing Terraform with Bicep 
 
 - https://learn.microsoft.com/en-us/azure/developer/terraform/comparing-terraform-and-bicep?tabs=comparing-bicep-terraform-integration-features
 
-
-
-
-
-## Troubleshouting 
-- https://www.padok.fr/en/blog/terraform-azure-app-docker
-- https://discuss.hashicorp.com/t/azurerm-linux-web-app-cannot-create-docker-web-app-the-parameter-linuxfxversion-has-an-invalid-value/41649

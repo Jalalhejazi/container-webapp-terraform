@@ -28,7 +28,9 @@ PremiumV2 Tier → P1v2, P2v2, P3v2 (Small, Medium, Large)
 
 ```
 
+## Comparing Terraform with Bicep 
 
+- https://learn.microsoft.com/en-us/azure/developer/terraform/comparing-terraform-and-bicep?tabs=comparing-bicep-terraform-integration-features
 
 
 

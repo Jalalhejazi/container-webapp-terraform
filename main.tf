@@ -1,16 +1,13 @@
 locals {
-  docker_image_name = "jalalhejazi/container-webapp"
-  docker_image_tag  = "latest"
+  docker_registry_url = "https://index.docker.io"
+  docker_image_name   = "jalalhejazi/container-webapp"
+  docker_image_tag    = "latest"
 }
-
-
 
 resource "random_integer" "suffix" {
   min = 1000
   max = 9999
 }
-
-
 
 # Desired state: Resource Group
 resource "azurerm_resource_group" "group" {
@@ -34,8 +31,8 @@ resource "azurerm_app_service_plan" "plan" {
   reserved = true
 
   sku {
-    tier = "Standard"
-    size = "S1"
+    tier = "Basic"
+    size = "B1"
   }
   tags = {
     description = var.description,
@@ -59,20 +56,11 @@ resource "azurerm_app_service" "myapp" {
 
   app_settings = {
     "WEBSITES_ENABLE_APP_SERVICE_STORAGE" = "false"
-    "DOCKER_REGISTRY_SERVER_URL"          = "https://index.docker.io"
-    #DOCKER_REGISTRY_SERVER_USERNAME = ""
-    #DOCKER_REGISTRY_SERVER_PASSWORD = ""
-
-
+    "DOCKER_REGISTRY_SERVER_URL"          = local.docker_registry_url
   }
-
-
-
-
   identity {
     type = "SystemAssigned"
   }
-
   tags = {
     description = var.description,
     environment = var.environment,
